@@ -1,0 +1,26 @@
+[package]
+name = "floem-ui-kit"
+description = "Ready-to-use UI components for the Floem GUI library"
+license = "MIT"
+version = "0.1.0"
+edition = "2021"
+repository = "https://github.com/pieterdd/floem-ui-kit"
+include = ["/src", "/docs"]
+categories = ["gui"]
+keywords = ["gui", "ui", "graphics", "interface", "widgets"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+embed-doc-image = "0.1.4"
+floem = { git = "https://github.com/lapce/floem", rev = "e795021bfb28cd15a6d499349e547c435ceb8520" }
+im = "15.1.0"
+num = "0.4.1"
+strum = { version = "0.25.0", features = ["derive"] }
+
+[workspace]
+members = [
+	"examples/counter_floem",
+	"examples/counter_uikit",
+	"examples/showcase",
+]

@@ -1,0 +1,8 @@
+{
+  "rust-analyzer.linkedProjects": [
+    ".\\Cargo.toml",
+    ".\\examples\\counter_floem\\Cargo.toml",
+    ".\\examples\\counter_uikit\\Cargo.toml",
+    ".\\examples\\showcase\\Cargo.toml"
+  ]
+}

@@ -1,0 +1,10 @@
+[package]
+name = "counter-uikit"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+floem-ui-kit = { path = "../.." }
+floem = { git = "https://github.com/lapce/floem", rev = "e795021bfb28cd15a6d499349e547c435ceb8520" }
