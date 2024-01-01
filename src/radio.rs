@@ -128,10 +128,10 @@ impl Theme {
                     s.disabled(|s| s.color(self.accent_color.get().disabled_text_color()))
                 }),
             ))
-            .base_style(|s| s.align_items(AlignItems::Center))
             .keyboard_navigatable()
             .style(move |s| {
-                s.border_radius(5.0)
+                s.align_items(AlignItems::Center)
+                    .border_radius(5.0)
                     .focus_visible(|s| {
                         s.outline(2.0)
                             .outline_color(Color::WHITE.with_alpha_factor(0.5))
