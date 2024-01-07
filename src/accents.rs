@@ -29,7 +29,7 @@ pub enum BorderColorVariant {
 }
 
 impl AccentColor {
-    pub fn primary_container_background(&self) -> Color {
+    pub fn root_view_background(&self) -> Color {
         match self {
             Self::Magenta => Color::rgb(0.12, 0.11, 0.13),
             Self::Green => Color::rgb(0.11, 0.11, 0.12),

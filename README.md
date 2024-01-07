@@ -43,7 +43,7 @@ The Floem UI Kit workflow involves:
 1. Creating an instance of [`floem_ui_kit::theme::Theme`](https://docs.rs/floem-ui-kit/latest/floem_ui_kit/theme/struct.Theme.html). `Theme::default()` creates an instance with default settings.
 2. Using the widget creation methods in `Theme` to build your UI. If Floem UI Kit doesn't have exactly what you want, you can mix and match with self-written UI components. You can keep using Floem's `v_stack` and `h_stack` methods to lay out your components.
 3. Wrapping your window contents in Floem UI Kit's padded container to ensure your widgets don't stick to the side of the window.
-4. Wrapping the padded container in Floem UI Kit's primary container to apply the theme's window background.
+4. Wrapping the padded container in Floem UI Kit's root view to apply the theme to the entire window.
 
 [Over here](examples/counter_uikit/src/main.rs) you'll find the above example ported to Floem UI Kit. Here is a reference render:
 

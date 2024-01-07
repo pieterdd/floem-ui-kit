@@ -25,7 +25,7 @@ fn app_view() -> impl View {
     let (counter, set_counter) = (rw_counter.read_only(), rw_counter.write_only());
     let text_value = create_rw_signal(String::from("This is a text"));
 
-    theme.primary_container(
+    theme.root_view(
         v_stack((
             theme.simple_header("Header"),
             theme.padded_container(

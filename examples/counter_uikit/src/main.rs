@@ -11,7 +11,7 @@ fn app_view() -> impl View {
 
     let (counter, set_counter) = create_signal(0);
 
-    theme.primary_container(
+    theme.root_view(
         theme.padded_container(v_stack((
             theme.label(
                 move || format!("Value: {}", counter.get()),
