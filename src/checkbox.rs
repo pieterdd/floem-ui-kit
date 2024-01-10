@@ -3,7 +3,7 @@ use std::fmt::Display;
 use floem::{
     event::EventListener,
     peniko::Color,
-    reactive::{create_signal, ReadSignal, WriteSignal},
+    reactive::{create_signal, ReadSignal},
     style::AlignItems,
     view::View,
     views::{container, h_stack, label, svg, Decorators},
@@ -31,7 +31,6 @@ impl Theme {
     pub fn labeled_checkbox<S: Display + 'static>(
         self,
         read_signal: ReadSignal<bool>,
-        write_signal: WriteSignal<bool>,
         label_render_func: impl Fn() -> S + 'static,
     ) -> impl View {
         let (is_hovering, set_is_hovering) = create_signal(false);
@@ -110,10 +109,6 @@ impl Theme {
                             .outline_color(Color::WHITE.with_alpha_factor(0.5))
                     })
                     .gap(10.0, 0.0)
-            })
-            .on_click(move |_| {
-                write_signal.set(!read_signal.get());
-                floem::EventPropagation::Stop
             })
             .on_event_stop(EventListener::PointerEnter, move |_| {
                 set_is_hovering.set(true);
