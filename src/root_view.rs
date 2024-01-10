@@ -10,10 +10,10 @@ impl Theme {
     /// Always use this as the foundation of your layout.
     pub fn root_view<V: View + 'static>(self, child: V) -> impl View {
         container(child).style(move |s| {
-            s.width_full()
-                .background(self.accent_color.get().root_view_background())
+            s.background(self.accent_color.get().root_view_background())
                 .color(Color::WHITE)
                 .font_size(16.0)
+                .width_full()
         })
     }
 }
