@@ -25,7 +25,7 @@ Its [README](https://github.com/lapce/floem) and [documentation](http://lapce.de
 Since Floem does not have a published release, you can install it as a Git dependency:
 
 ```toml
-floem = { git = "https://github.com/lapce/floem", rev = "e795021bfb28cd15a6d499349e547c435ceb8520" }
+floem = { git = "https://github.com/lapce/floem", rev = "9fc98fd6789beb1accc7af25291321ae3d0d9542" }
 ```
 
 Crates.io does not allow Git dependencies, so Floem UI Kit is not available on crates.io yet. When Floem publishes to crates.io, Floem UI Kit will publish as well. In the meantime, you can install Floem UI Kit as a Git dependency.
