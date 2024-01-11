@@ -7,7 +7,7 @@ use floem::{
     style::AlignItems,
     style_class,
     view::View,
-    views::{container, h_stack, label, svg, virtual_list, Decorators, VirtualListDirection},
+    views::{container, h_stack, h_stack_from_iter, label, svg, v_stack_from_iter, Decorators},
 };
 use strum::IntoEnumIterator;
 
@@ -172,37 +172,22 @@ impl Theme {
         T: IntoEnumIterator + Copy + Clone + PartialEq + Eq + Display + std::hash::Hash + 'static,
     {
         let variants: im::Vector<T> = T::iter().collect();
-        let last_variant = *(variants
-            .last()
-            .expect("Cannot pass empty enum to radio group"));
         let (variants_signal, _set_variant) = create_signal(variants);
 
-        container(
-            virtual_list(
-                match variant {
-                    RadioGroupVariant::Horizontal => VirtualListDirection::Horizontal,
-                    RadioGroupVariant::Vertical => VirtualListDirection::Vertical,
-                },
-                floem::views::VirtualListItemSize::Fixed(Box::new(|| 20.0)),
-                move || variants_signal.get(),
-                move |item| *item,
-                move |item| {
-                    container(self.radio_button(item, read_signal, write_signal)).style(move |s| {
-                        s.apply_if(
-                            item != last_variant && variant == RadioGroupVariant::Vertical,
-                            |s| s.margin_bottom(gap_between_items),
-                        )
-                        .apply_if(
-                            item != last_variant && variant == RadioGroupVariant::Horizontal,
-                            |s| s.margin_right(gap_between_items),
-                        )
-                    })
-                },
-            )
-            .style(move |s| {
-                s.apply_if(variant == RadioGroupVariant::Vertical, |s| s.flex_col())
-                    .apply_if(variant == RadioGroupVariant::Horizontal, |s| s.flex_row())
-            }),
-        )
+        // These are not reactive. This is a consequence of how items are passed to `h_stack_from_iter`. Since
+        // the enum values are known at compile time, this is not an issue.
+        let group_items = variants_signal
+            .get()
+            .into_iter()
+            .map(|item| container(self.radio_button(item, read_signal, write_signal)));
+
+        container(match variant {
+            RadioGroupVariant::Horizontal => {
+                h_stack_from_iter(group_items).style(move |s| s.gap(gap_between_items, 0.))
+            }
+            RadioGroupVariant::Vertical => {
+                v_stack_from_iter(group_items).style(move |s| s.gap(0., gap_between_items))
+            }
+        })
     }
 }
