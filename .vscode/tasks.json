@@ -11,6 +11,17 @@
 			"options": {
 				"cwd": "examples/showcase"
 			}
+		},
+		{
+			"type": "cargo",
+			"command": "run",
+			"problemMatcher": [
+				"$rustc"
+			],
+			"label": "rust: start counter",
+			"options": {
+				"cwd": "examples/counter"
+			}
 		}
 	]
 }

@@ -1,7 +1,6 @@
 use floem::reactive::create_signal;
 use floem::view::View;
 use floem::views::{h_stack, v_stack, Decorators};
-use floem::EventPropagation;
 use floem_ui_kit::button::ButtonVariant;
 use floem_ui_kit::label::LabelVariant;
 use floem_ui_kit::theme::Theme;
@@ -20,15 +19,13 @@ fn app_view() -> impl View {
             h_stack((
                 theme
                     .button(|| "Increment", ButtonVariant::Emphasized)
-                    .on_click(move |_| {
+                    .on_click_stop(move |_| {
                         set_counter.update(|value| *value += 1);
-                        EventPropagation::Stop
                     }),
                 theme
                     .button(|| "Decrement", ButtonVariant::Emphasized)
-                    .on_click(move |_| {
+                    .on_click_stop(move |_| {
                         set_counter.update(|value| *value -= 1);
-                        EventPropagation::Stop
                     }),
             )),
         ))),

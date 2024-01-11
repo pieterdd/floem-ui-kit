@@ -20,7 +20,6 @@ strum = { version = "0.25.0", features = ["derive"] }
 
 [workspace]
 members = [
-	"examples/counter_floem",
-	"examples/counter_uikit",
+	"examples/counter",
 	"examples/showcase",
 ]

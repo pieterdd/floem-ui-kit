@@ -9,7 +9,16 @@ Want a pretty Rust GUI with minimal time investment? Use a kit of premade UI com
 
 ![Showcase](docs/img/showcase.png)
 
-⚠️ **Floem UI Kit, like Floem, is experimental software.** ⚠️
+⚠️ **Floem UI Kit, like Floem, is experimental software. Breaking API changes may regularly happen.** ⚠️
+
+## First time using Floem?
+
+Its [README](https://github.com/lapce/floem) and [documentation](http://lapce.dev/floem/floem/) provide a quick start example, an introduction and some background on Floem's architecture. You might notice that it incorporates familiar concepts from other UI frameworks, including:
+
+- Interface composition using nestable horizontal and vertical widget containers
+- A styling system that brings many CSS-like features to Rust, without the overhead of a browser runtime
+- Reactivity using signals, as seen in frameworks like [SolidJS](https://www.solidjs.com/)
+- Implementation of UIs using functions, similar to Jetpack Compose
 
 ## Installation
 
@@ -21,21 +30,6 @@ floem = { git = "https://github.com/lapce/floem", rev = "e795021bfb28cd15a6d4993
 
 Crates.io does not allow Git dependencies, so Floem UI Kit is not available on crates.io yet. When Floem publishes to crates.io, Floem UI Kit will publish as well. In the meantime, you can install Floem UI Kit as a Git dependency.
 
-## First time using Floem?
-
-Floem's documentation is available [here](http://lapce.dev/floem/floem/). You might notice that it incorporates familiar concepts from other UI frameworks, including:
-
-- Interface composition using nestable horizontal and vertical widget containers
-- A styling system that brings many CSS-like features to Rust, without the overhead of a browser runtime
-- Reactivity using signals, as seen in frameworks like [SolidJS](https://www.solidjs.com/)
-- Implementation of UIs using functions, similar to Jetpack Compose
-
-For a mimimal example involving a counter that can be incremented/decremented, have a look at [this file](examples/counter_floem/src/main.rs). It looks quite basic when rendered:
-
-![A counter in pure floem](docs/img/counter_floem.png)
-
-If you've familiarized yourself with the Floem's basics, keep reading to find out how to spice things up.
-
 ## Getting started with Floem UI Kit
 
 The Floem UI Kit workflow involves:
@@ -45,7 +39,7 @@ The Floem UI Kit workflow involves:
 3. Wrapping your window contents in Floem UI Kit's padded container to ensure your widgets don't stick to the side of the window.
 4. Wrapping the padded container in Floem UI Kit's root view to apply the theme to the entire window.
 
-[Over here](examples/counter_uikit/src/main.rs) you'll find the above example ported to Floem UI Kit. Here is a reference render:
+[Over here](examples/counter/src/main.rs) you'll find Floem's quickstart example ported to Floem UI Kit. Here is a reference render:
 
 ![A counter in Floem UI Kit](docs/img/counter_uikit.png)
 
