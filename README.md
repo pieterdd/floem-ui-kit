@@ -1,5 +1,8 @@
 # Floem UI Kit
 
+[![crates.io](https://img.shields.io/crates/v/floem-ui-kit.svg)](https://crates.io/crates/floem-ui-kit)
+[![docs.rs](https://docs.rs/floem-ui-kit/badge.svg)](https://docs.rs/floem-ui-kit)
+
 Want a pretty Rust GUI with minimal time investment? Use a kit of premade UI components! Floem UI Kit provides themed widgets you can use in conjunction with the [Floem](https://github.com/lapce/floem) GUI library.
 
 - ✅ Supports all major desktop operating systems
