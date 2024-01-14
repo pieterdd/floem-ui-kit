@@ -7,7 +7,7 @@ edition = "2021"
 repository = "https://github.com/pieterdd/floem-ui-kit"
 include = ["/src", "/docs"]
 categories = ["gui"]
-keywords = ["gui", "ui", "graphics", "interface", "widgets", "floem-themes"]
+keywords = ["gui", "graphics", "interface", "widgets", "floem-themes"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
