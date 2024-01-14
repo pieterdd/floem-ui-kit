@@ -63,7 +63,7 @@ For an example incorporating all available widgets, [see here](examples/showcase
 
 ## Not quite what you're looking for?
 
-I'm not aware of any other Floem UI component libraries right now.
+You can browse the [floem-themes](https://github.com/topics/floem-themes) topic on GitHub to look for other Floem UI libraries and themes.
 
 As far as Rust UI libraries go, [Iced](https://iced.rs/) is a well-known one. Device manufacturer System76 is using it to implement its own desktop environment. You might be able to build onto their work by checking out [libcosmic](https://github.com/pop-os/libcosmic). Be advised that its learning curve may be a bit steeper than Floem's, and that the library is primarily intended for use by applications that are native to the Cosmic desktop environment.
 
