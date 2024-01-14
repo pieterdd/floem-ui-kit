@@ -1,15 +1,14 @@
 # Floem UI Kit
 
-Want a pretty Rust GUI with minimal time investment? Use a kit of premade UI components! Floem UI Kit provides polished widgets you can use in conjunction with the [Floem](https://github.com/lapce/floem) GUI library.
+Want a pretty Rust GUI with minimal time investment? Use a kit of premade UI components! Floem UI Kit provides themed widgets you can use in conjunction with the [Floem](https://github.com/lapce/floem) GUI library.
 
 - ✅ Supports all major desktop operating systems
 - ✅ All widgets implement hover, focus and disabled state
-- ✅ All widgets provide keyboard access
 - ✅ Supports multiple accent colors
 
-![Showcase](docs/img/showcase.png)
-
 ⚠️ **Floem UI Kit, like Floem, is experimental software. Breaking API changes may regularly happen.** ⚠️
+
+![Showcase](docs/img/showcase.png)
 
 ## First time using Floem?
 
