@@ -31,7 +31,7 @@ fn app_view() -> impl View {
             theme.padded_container(
                 v_stack((
                     theme
-                        .labeled_checkbox(inputs_enabled, || "Enable all inputs")
+                        .labeled_checkbox(move || inputs_enabled.get(), || "Enable all inputs")
                         .on_click_stop(move |_| {
                             set_inputs_enabled.set(!inputs_enabled.get());
                         }),
@@ -79,7 +79,7 @@ fn app_view() -> impl View {
                         .integer_input(rw_counter, 1, Some(-2), Some(9000))
                         .disabled(move || !inputs_enabled.get()),
                     theme
-                        .labeled_checkbox(boolean_signal, || "Ordinary checkbox")
+                        .labeled_checkbox(move || boolean_signal.get(), || "Ordinary checkbox")
                         .on_click_stop(move |_| {
                             set_boolean_signal.set(!boolean_signal.get());
                         })
