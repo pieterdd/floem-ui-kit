@@ -13,7 +13,7 @@ keywords = ["gui", "graphics", "interface", "widgets", "floem-themes"]
 
 [dependencies]
 embed-doc-image = "0.1.4"
-floem = "0.1.1"
+floem = { git = "https://github.com/lapce/floem", rev = "1c417d0ef87122f5baaf493db7db4351dba5d403" }
 im = "15.1.0"
 num = "0.4.1"
 strum = { version = "0.25.0", features = ["derive"] }

@@ -7,4 +7,4 @@ edition = "2021"
 
 [dependencies]
 floem-ui-kit = { path = "../.." }
-floem = "0.1.1"
+floem = { git = "https://github.com/lapce/floem", rev = "1c417d0ef87122f5baaf493db7db4351dba5d403" }
